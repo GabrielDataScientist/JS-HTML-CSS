@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Graphics-Vibe-Developer-Javascript.ico" type="image/x-icon">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Reprodução de áudio</h1>
+    <p>Para reprodução de áudio, utiliza-se a tag <strong>&lt;audio&gt;</strong> e para adicionar
+    configurações adicionais ao áudio, a tag <strong>&lt;source&gt;</strong></p>
+    <hr>
+    <h2>Adicionando um áudio simples</h2>
+    <ul>
+        <li>Addict(Instrumental) - NEFFEX</li>
+    </ul>
+    <audio src="Musicas/Addict (Instrumental) - NEFFEX.mp3" controls autoplay></audio>
+    <hr>
+    <h2>Áudio com mais configurações</h2>
+    <p>Este áudio está configurado via source. Verificar código.</p>
+    <audio preload="metadata" controls autoplay> <!-- Por pardão o preload vem auto. Mas é recomendado colocar metadata.-->
+       <source src="Musicas/Addict (Instrumental) - NEFFEX.mp3" type="audio/mpeg"><!-- Source src é para arquivos de áudio. type=mpeg para MP3-->
+       <source src="Musicas/Addict (Instrumental) - NEFFEX.ogg" type="audio/ogg"><!--Se não carregar o áudio mp3, carregará esse-->
+       <source src="Musicas/Addict (Instrumental) - NEFFEX.wav" type="audio/wav"><!-- Se não carrgar o áudio ogg, tentará carregar esse.-->
+       <p>Infelizmente o seu navegador não suporta áudios.
+            <a href="Musicas/Addict (Instrumental) - NEFFEX.mp3">Clique aqui para baixar o arquivo de áudio.</a>
+       </p>
+       <!-- Não é recomendado incluir arquivos wav no site pois é muito pesado. Recomenda-se disponiblizar apenas para download.-->
+       <!-- Mais explicações das tags no arquivo word no repositório-->
+    </audio>
+</body>
+</html>

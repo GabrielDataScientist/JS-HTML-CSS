@@ -29,5 +29,14 @@
     <p>Os Favicons são ícones pequenos presentes nas abas dos sites. Sâo os logos.
         Para inseri-lo, basta criar o link favicon no seção head.
     </p>
+    <hr>
+    <h1>Imagens Dinâmicas</h1>
+    <p>Imagem tamanho grande que irá se redimensionar automaticamente de acordo com o tamanho da janela</p>
+    <picture> <!-- Tag que permite colocar imagens de várias fonte e configuraçoes-->
+        <!-- Na tag img, coloca-se a imagem padrão. Nas tags sources, coloca a imagem menor ou maior, a depende do tipo de dispositivo que o usuário acessará.-->
+        <source media="(max-width: 300px )" srcset="html_css_js_pequena.jpeg" type="image/jpeg"><!-- Imagem pequena-->
+        <source media="(max-width: 650x )" srcset="html_css_js_media.jpeg" type="image/jpeg"><!--Imagém média-->
+        <img src="html_css_js_grande.jpeg" alt="Imagem flexivel"> <!--Aqui vai a imagem padrão(grande)-->
+    </picture>
 </body>
 </html>
