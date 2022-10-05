@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+body{
+    background-color: black;
+}
+h1{
+    color: floralwhite;
+}
+
+p{
+    color: floralwhite;
+    text-align: center;
+
+}
