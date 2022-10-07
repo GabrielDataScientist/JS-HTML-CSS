@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Applicando CSS */
+        body{
+            font: normal 20pt Arial;
+        }
+        h2{
+            font: normal 20pt Arial;
+            font-weight: bold;
+        }
+    </style>
+    <title>Variáveis</title>
+</head>
+<body>
+    <!--Formatação de strings e place holder. É o $ mais as {}. Para funcionar, devem estar entre apóstrofos. É como se fosse o f"{variável}" do Py-->
+    <script>
+        //Formatando strings
+        let st = "Meu nome é José"
+        document.writeln(`<strong>${st}</strong></br>`)
+        window.alert(`O tamanho da variável "${st}" é ${st.length}`) //Perceba os apóstrofos
+        window.alert(`Tudo maiúscula ${st.toUpperCase()}`)
+        window.alert(`Tudo minúscula ${st.toLowerCase()}`)
+    </script>
+
+    <!--Usando o documento.write para escrever na tela-->
+    <script>
+        let nome = window.prompt("Digite seu nome novamente: ")
+        document.write(`O tamanho da variável "${nome}" é ${nome.length}</br>`)
+        document.write(`Tudo maíuscula: ${nome.toUpperCase()}</br>`)
+        document.write(`Tudo minúscula: ${nome.toLowerCase()}</br>`)
+    </script>
+    <hr>
+    <!--Formatando números-->
+    <script>
+        let n1 = 6000.3
+        document.write(`${n1}</br>`)
+        document.write(`${n1.toFixed(2)}</br>`) //Para duas casas decimais
+        document.write(`${n1.toFixed(3).replace(".", ",")}</br>`) //Função replace
+        document.write("<h2>Formatando para moeda BR</h2>")
+        document.write(n1.toLocaleString("pt-BR", {style:"currency", currency:"BRL"}))
+    </script>
+    <hr>
+</body>
+</html>

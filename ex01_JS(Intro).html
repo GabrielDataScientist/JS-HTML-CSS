@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos em JS</title>
+</head>
+<body>
+    <!--Declaração de variável-->
+    <script>
+        //Para declarar uma variável, pode-se usar o var, let ou const
+        let nome = window.prompt("Qual o seu nome?")
+        window.alert("Meu nome é, " + nome) //o "+" aqui significa concatenação
+    </script>
+
+    <!--Conversão de tipo-->
+    <script>
+        //Para converter de string para number, usa o Number.parseInt(), parseInt() ou somente Number().
+        //Parar converter para string, usa o string(n) ou o n.toString()
+        let n1 = Number.parseInt(window.prompt("Digite um número: "))
+        let n2 = Number.parseInt(window.prompt("Digite outro número: "))
+        var n3 = n1 + n2
+        window.alert("A soma é: " + n3)
+        //Use o placeholder para deixar o código mais profissional
+        window.alert(`A soma de ${n1} + ${n2} é: ${n3}`)
+    </script>
+</body>
+</html>
