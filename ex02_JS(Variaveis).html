@@ -39,10 +39,13 @@
     <script>
         let n1 = 6000.3
         document.write(`${n1}</br>`)
+        document.write(`${n1.toFixed(2)}</br>`)
         document.write(`${n1.toFixed(2)}</br>`) //Para duas casas decimais
         document.write(`${n1.toFixed(3).replace(".", ",")}</br>`) //Função replace
         document.write("<h2>Formatando para moeda BR</h2>")
         document.write(n1.toLocaleString("pt-BR", {style:"currency", currency:"BRL"}))
+        document.write(n1.toLocaleString("pt-BR", {style:"currency", currency:"USD"}))
+        document.write(n1.toLocaleString("pt-BR", {style:"currency", currency:"EUR"}))
     </script>
     <hr>
 </body>
