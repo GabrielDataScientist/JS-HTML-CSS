@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <!-- Adicionando o CSS especificamente à div-->
+    <style>
+        div#area{
+            font: normal 10pt arial;
+            background-color: green;
+            font-weight: bolder;
+            color: white;
+            /* Largura */
+            width: 200px;
+            /*Altura*/
+            height: 200px;
+             /*Altura da linha do texto*/
+            line-height: 200px;
+            /*Posição do texto*/
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="area" onclick="cliqueaqui()" onmouseenter="entrou()" onmouseleave="saiu()">
+        Interaja
+    </div>
+    <script>
+
+        //Declarando variável global
+        let a = window.document.querySelector("div#area")
+
+        /*Os Listener são métodos que anexam um evento a um determinado elemento sem sobrescrever os outros eventos.
+            Ao invés de usar o evento assim: 
+                <div id="area" onclick="cliqueaqui()" onmouseenter="entrou()" onmouseleave="saiu()">
+            Use os eventos com os listeners listado abaixo.
+        */
+        a.addEventListener("click", cliqueaqui)
+        a.addEventListener("mousenter", entrou)
+        a.addEventListener("mouseout", saiu)
+
+        /* Ou podem ser usados assim: document.querySelector("div#area").addEventListener("click", cliqueaqui) */
+
+        //Criação de função. function nome_da_function () {}
+        function cliqueaqui(){
+          a.innerText = "Clicou!"
+          a.style.background = "red"
+        }
+
+        function entrou(){
+            a.innerText = "Entrou!"
+            a.style.background = "black"
+        }
+
+        function saiu(){
+            a.innerText = "Saiu!"
+            a.style.background = "green"
+        }
+
+
+    </script>
+    <p>
+        Link para conferir todas os eventos do DOM: <br>
+        <a href=" https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank" rel="external"> https://www.w3schools.com/jsref/dom_obj_event.asp</a> <br>
+        Para saber mais sobre os Listeners <br>
+        <a href="https://www.w3schools.com/js/js_htmldom_eventlistener.asp" target="_blank" rel="external">https://www.w3schools.com/js/js_htmldom_eventlistener.asp</a>
+       
+    </p>
+</body>
+</html>

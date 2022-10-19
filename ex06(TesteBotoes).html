@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Aplicando CSS-->
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        h1{
+            font: normal 40px arial ;
+        }
+        p#botaosoma{
+            font: normal 20px arial;
+            font-weight: bolder;
+        }
+        input#n1{
+            border-color: black;
+        }
+        input#n2{
+            border-color: black;
+        }
+        input#btn{
+            height: 25px;
+            width: 80px;
+        }
+        div#resultado{
+            font: normal 20px arial;
+            font-weight: bolder;
+            margin-top: 20px;
+        }
+    </style>
+
+    <title>Testando Botões</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+
+    <!-- input é HTML-->
+    <input type="number" name="n1" id="n1"> <p id="botaosoma">+</p>
+    <input type="number" name="n2" id="n2">
+    <input type="button" value="Somar" id="btn" onclick="somarvalor()">
+    <div id="resultado">Resultado aparecerá aqui</div>
+
+    <!--JavaScript-->
+    <script>
+        
+        function somarvalor(){
+           //Acessar os valores declarados no HTML
+           let n1 = window.document.querySelector("input#n1")
+           let n2 = window.document.querySelector("input#n2")
+           let btn = window.document.querySelector("input#btn")
+           let res = window.document.querySelector("div#resultado")
+
+           //Converter para número
+           let numero1 = Number(n1.value)
+           let numero2 = Number(n2.value)
+
+           //Faz o cálculo
+           let resultado = numero1 + numero2
+
+           //Mostra
+           res.innerHTML = (`A soma entre ${n1.value} + ${n2.value} é: ${resultado}`)
+           
+           //Estiliza o botão
+           btn.style.backgroundColor = ""
+        }
+    </script>
+    
+</body>
+</html>

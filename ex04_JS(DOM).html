@@ -4,13 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        p{
+            font: Arial;
+        }
+    </style>
     <title>DOM</title>
 </head>
 <body>
     <h1>DOM = Document Object Model</h1>
     <p>
-        É a vertente WEB do JavaScript
+        É a vertente WEB do JavaScript. <br>
+        Conjunto de objetos dentro do navegador que dá acesso aos componentes internos do website.
         http://127.0.0.1:5500//
     </p>
+    <hr>
+    <h1>Árvore DOM</h1>
+    <p>
+        Começa pelo window = root(raíz) <br>
+        Dentro do vários objetos, o window possui o Document = onde está o html do site <br>
+        Dentro do Document, está o body e o head (children) <br>
+        Cada parent pode conter várias childs que por sua vez podem conter inúmeros métodos
+    </p>
+    <hr>
+    <h1>5 métodos de acesso da Árvore DOM </h1>
+    <h2>Por Marca (tag)</h2>
+    <p>
+        É feito utilizando o comando getElementsByTagName('tag')[índice] -> o índice começa do 0. <br>
+    </p>
+    <p>
+        Esse é um <strong>parágrafo de teste</strong>, para demonstrar as funcionalidades do DOM.
+    </p>
+    <script>
+        let corpo = window.document.body
+        let p1 = window.document.getElementsByTagName('p')[0]
+
+        //Para adicionar html no JS, coloque a tag entre aspas.
+        window.document.writeln("Tag na primeira posição: " + p1.innerText + "<br>")
+        window.document.writeln("A variável que recebe o parágrafo também pode receber CSS. <br>")
+
+        //Variáveis que controlam o body e parágrafo.
+        p1.style.color = "blue"
+        corpo.style.backgroundColor = "white"
+
+        let p2 = window.document.getElementsByTagName('p')[3]
+        document.write("<br>")
+        document.writeln("Retornando o texto com formatação HTML utilizando o innerHTML <br>")
+        document.writeln(p2.innerHTML)
+        //window.alert(p2.innerHTML)
+    </script>
+    <hr>
+    <h2>Por ID</h2>
+    <div class="msg">Tag div usando ID para tastar o getElementsByID</div>
+    <p>
+        Utiliza o getElementById("nome_id")
+    </p>
+    <script>
+        let id_msg = window.document.getElementById("msg")
+        document.write("Retorno da variável: " + id_msg.innerText)
+        id_msg.innerText = "Estou te testando..."
+        id_msg.style.backgroundColor = "blue"
+        id_msg.style.color = "black"
+    </script>
+    <p>
+        O mesmo princípio de utilização do getElementById funciona para <strong>getElementsByName</strong> e <strong>getElementsByClass</strong>
+    </p>
+    <hr>
+    <h2>Por Seletor</h2> 
+    <p>
+        É a forma recomendável pela W3.
+    </p>
+    <script>
+        //Quando é id, utiliza o "#". Quando é classe, utiliza o ".(ponto)".
+        let v1 = document.querySelector("div.msg")
+        document.write("O querySelector(tag) é o comando para selecionar o seletor <br>")
+        document.write("Quando é id, utiliza o #. Quando é classe, utiliza o .(ponto). <br>")
+        document.write(v1.innerText)
+    </script>
+        
+    
 </body>
 </html>
