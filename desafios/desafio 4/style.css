@@ -1,0 +1,35 @@
+body{
+    font: normal 30px arial;
+    color: white;
+    background-color:rgb(8, 204, 204)
+}
+header{
+    text-align: center;
+    padding: 10px;
+}
+footer{
+    text-align: center;
+    padding: 10px;
+}
+section{
+    background-color: white;
+    margin: auto;
+    border-radius: 10px;
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    color: black;
+
+}
+#principal{
+    font: normal 20px arial;
+}
+#resultado{
+    font: normal 20px arial;
+    text-align: left;
+    padding: 2px;
+}
+#local_imagem{
+    text-align: center;
+}
