@@ -21,3 +21,6 @@ do {
 for (let num3 = 1; num3 <= 10; num3++){
     console.log(num3)
 }
+for (let num4 = 0; num4 <=100; num4 = num4+3){
+    console.log(num4);
+}
