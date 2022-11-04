@@ -44,7 +44,7 @@ function Verificar(){
                 }
             }
         resultado.style.textAlign = "center"
-        resultado.innerHTML = `É uma pessoa do gênero ${genero} com idade de ${idade.value} anos, nascida no ano de ${idade_anos}.<br>`
+        resultado.innerHTML = `É uma pessoa do gênero ${genero} com idade de ${idade.value} anos, nascida no ano de ${idade_anos}.\n`
         resultado.appendChild(img)
         
     }

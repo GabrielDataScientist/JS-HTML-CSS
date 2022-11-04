@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(3, 129, 203);
+    font: normal 30px arial;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+section{
+    margin: auto;
+    background-color: white;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    padding: 20px;
+}
+header{
+    padding: 10px;
+}
+footer{
+    padding: 10px;
+}
+#principal{
+    font: 25px arial;
+    color: black;
+}
+#resultado{
+    font: normal 25px arial;
+    color: black;
+}
+select{
+    margin-top: 10px;
+    padding: 5px;
+}
