@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icons8-html-5-16.png" type="image/x-icon">
+    <title>Links Internos e Externos</title>
+</head>
+<body>
+    <h1>Links Externos</h1>
+    <p>Para linkar um conteúdo, utiliza-se o <strong>&lt;a&gt;</strong> envelopando o texto para receber o hiperlink</p>
+    <p>Para abrir o hiperlink em uma nova aba após clicado, coloque o método target="_blank" e rel="external" informando 
+        que o link é externo</p>
+    <p>Clique <a href="https://github.com/GabrielDataScientist" target="_blank" rel="external">aqui</a> para acessar meu github</p>
+    <hr>
+    <h1>Links Internos</h1>
+    <p>Há como navegar entre os links internos</p>
+    <p>Sempre utilize o método rel dentro da tag "a" para informar ao Google qual o contexto do link (próximo, anterior, autor e externo)</p>
+    <ol type="1">
+        <li>Este é o primeiro link do respositório do curso <a href="ex01(Iniciando).html" target="_blank" rel="next">ex01</a>
+        <li>Este é o segundo link do respositório do curso <a href="ex02(Basicao).html" target="_blank" rel="next">ex02</a></li>
+        <li>Este é o terceiro link do respositório do curso <a href="ex03(Imagens).html" target="_blank" rel="next">ex03</a></li>
+        <li>Este é o quarto link do respositório do curso <a href="ex04(Listas).html" target="_blank" rel="next">ex04</a></li>
+    </ol>
+    <hr>
+    <h2>Links para Download</h2>
+    <p>Utiliza-se a mesma tag "a", com o método download="nome_do_arquivo.extensao" e o type. 
+        Existe um tipo de parâmetro pro type para cada tipo de arquivo a ser baixado. Verifique em <a 
+        href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="external">iana.org</a></p>
+    <p><a href="pdf_baixar_exemplo.pdf" download="pdf_baixar_exemplo.pdf" type="application/pdf">Clique aqui</a> para baixar um exemplo de PDF</p>
+    <p><a href="pdf_baixar_exemplo.zip" download="pdf_baixar_exemplo.zip" type="application/zip">Clique aqui</a> para baixar um exemplo de ZIP</p>
+</body>
+</html>

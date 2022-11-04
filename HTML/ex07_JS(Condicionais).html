@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Imagens/icons8-suv-2-16.png" type="image/x-icon">
+
+    <!--CSS-->
+    <style>
+        body{
+            background-color: aqua;
+        }
+        input#velocidade{
+            border-style: groove;
+        }
+        p{
+            font: normal 20px serif;
+        }
+        button#botao{
+            background-color: white;
+            border-style: groove;
+        }
+        div#resultado{
+            font: bolder 20px serif;
+        }
+    </style>
+
+    <title>Condicionais</title>
+</head>
+<body>
+
+    <!--HMTL-->
+    <h1>Análise de Velocidade do Carro</h1>
+    <p>
+        Velocidade limite da rodovia:<strong> 60km/h</strong> <br>
+        Digite a velocidade do carro:
+        <input type="number" name="velocidade" id="velocidade">
+        
+    </p>
+
+    <!--Divi para mostrar o resultado-->
+    <div id="resultado">
+
+    </div>
+
+    <!--Botão de comando-->
+    <button id="botao" onClick="verificar_velocidade(valor_vel)">Verificar!</button>
+    
+    <!--Script JavaScript-->
+    <script>
+        let txtvel = window.document.querySelector("input#velocidade")
+        let res = window.document.querySelector("div#resultado")
+        //let valor_vel = Number(txtvel.value)
+        let valor_vel = 80
+        
+        function verificar_velocidade(valor){
+            if (valor > 60){
+                res.innerHTML = `A sua velocidade está acima da velocidade permitida na rodovia. `
+            } 
+                res.innerHTML = `Velocidade adequada para a rodovia.`
+            }
+        
+    </script>
+</body>
+</html>

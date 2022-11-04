@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parágrafos e quebra de linhas</title>
+</head>
+<body>
+    <h1> Parágrafos, textos, quebra de linhas caracteres especiais</h1><!-- Cabeçalhos h1, h2, h3, ...-->
+    <hr>
+    <p>
+        Aqui está uma exemplo de parágrafo e quebra de linhas,
+        podendo conter qualquer texto.
+        Se precisar quebrar texto num local específico, utilize o <br>
+        <strong>&lt;br&gt;</strong> em algum lugar específico do texto.
+        (br - break row)
+    </p>
+    <p>
+        Pode colocar quantos parágrafos quiser entre as tag 
+        <strong>&lt;p&gt; e &lt;/p&gt;</strong> dentro do <strong>&lt;body&gt; &lt;/body&gt;</strong>
+    </p>
+    <hr>
+    <h2>Carateres especiais</h2> 
+    <p>
+        Alguns carateres especiais:
+        &reg;
+        &copy;
+        &trade;
+        &copf;
+        &cacute;
+        &aacute;
+        &ac;
+        &uarr;
+        &darr;
+        &dagger;
+        &DownArrowUpArrow;
+    </p>
+    <hr>
+    <h3>Emojis</h3>
+    <p> Os emojis são representados por valores hexadecimais.</p>
+    <p> Acesse esss site para emojis: <a href="https://emojipedia.org/">https://emojipedia.org/</a></p>
+    <p>
+        Exemplos: &#x1F610;
+        &#x1F600;
+        &#x1F929;
+    </p>
+    <hr>
+    <h1>Exemplos de parágrafo - Esse é o h1</h1>
+    <h2>Esse é o H2</h2>
+    <h3>Esse é o H3</h3>
+    <h4>Esse é o H4</h4>
+    <hr>
+    <h1>Semântica e formatação</h1>
+    <h2>Negrito/Destaque</h2>
+    <p>Esse é um <b>termo em negrito</b> usando a tag B(não semântico)</p>
+    <p>Esse é um <strong>termo em negrito</strong> usando a tag Strong(semântica)</p>
+    <h2>Itálico/Ênfase</h2>
+    <p>Esse é um <i>termo em Itálico</i> usando a tag I(não semântica)</p>
+    <p>Esse é um <em>termo em Itálico</em> usando a tag EM(semântica) </p>
+    <h2>Marcador de Texto</h2>
+    <p>Esse é um <mark>termo marcado</mark> usando a tag Mark
+    <p>Esse é um <mark style=background-color:limegreen>termo marcado</mark> usando a tag Mark + o style(css)</p>
+    <h2>Texto Grande e Pequeno</h2>
+    <p>Esse é um exemplo de <big>texto Grande</big> usando o Big e <small>texto Pequeno</small> usando o Small</p>
+    <p>A tag Big já caiu em desuso, porém o Small segue firme e forte </p>
+    <h2>Texto riscado/deletado</h2>
+    <p>Esse é um <strike>termo riscado/deletado</strike> usando a tag Strike(não semântica)</p>
+    <p>Esse é um <del>termo riscado/deletado</del> usando a tag Del(semântica)</p>
+    <h2>Texto Inserido/Sublinhado</h2>
+    <p>Esse é um <u>termo inserido/sublinhado</u> pela tag U(não semântica)</p>
+    <p>Esse é um termo <ins>inserido/sublinhado</ins> pela tag INS(semântica)</p>
+    <h2>Texto sobrescrito</h2>
+    <p>A fórmula x<sup>10</sup> + 2 tem o 10 sobrescrito</p>
+    <h2>Texto subscrito</h2>
+    <p>A fórmula H<sub>2</sub>O tem o 2 subscrito</p>
+    <p>A tendência é que as tags não semânticas como B e I caiam em
+        não conformidade num futuro próximo. Sempre que tiver que negritar ou 
+        dar destaque a uma frase, use Strong e/ou Em.
+    </p>
+    <hr>
+    <h2>Formatação de código</h2>
+    <p>Exemplo de código em python usando o code e o pre com fonte monoformatada</p><!-- O pre deixa o texto na formatação original-->
+    <pre>
+        <code>
+        numero = input(Digite um número: )
+        if numero % 2 == 0:
+             print("Você digitou um número par")
+        else:
+             print("Você digitou um número impar")
+        </code>
+    </pre>
+    <hr>
+    <h2>Citações simples</h2>
+    <p>De acordo com seu madruga: <q>A vingança nunca é plena, mata a alma e a envenena.</q></p>
+    <p>Essas "aspas" foram criadas com a tag q</p>
+    <h2>Citações completas</h2>
+    <p>Segundo Napoleon Hill, no seu livro <em>Pense e Enriqueça</em></p>
+    <blockquote cite="https://www.amazon.com.br/Pense-enrique%C3%A7a-Napoleon-Hill/dp/8546501467?asin=B088N86717&revisionId=70b45cf&format=1&depth=1">
+        Uma das causas mais comuns do fracasso é o hábito de desistir quando se está tomado
+        por um sentimento temporário de derrota.
+    </blockquote>
+    <!-- O método cite, dentro do blockquote, direciona o algoritmo do Google para quem é o autor da frase. Muito importante usar-->
+    <hr>
+    <h2>Abreviações</h2>
+    <p>Para linkar uma palavra abreviada, como o <abbr title="HyperText Markup Language">HTML</abbr>, 
+        e <abbr title="Cascating Style Sheet">CSS</abbr> usamos a tag abbr</p>  
+    <hr>
+    <h2>Texto Invertido</h2>
+    <p><bdo dir="rtl">Essa é a tag mais inútil de todo o HTML</bdo></p>
+</body>
+</html>

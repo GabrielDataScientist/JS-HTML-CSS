@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/*Para comentar dentro de uma tag CSS */
+body{
+    background-color:rgb(188, 188, 169)
+}
+h1{
+    color: rgb(250, 253, 252);
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+}

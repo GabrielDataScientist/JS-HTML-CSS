@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icons8-html-5-16.png" type="image/x-icon">
+    <title>Listas Ordenadas e Desordenadas</title>
+</head>
+<body>
+    <h1>Listas Ordenadas</h1>
+    <p>Utiliza-se o <strong>&lt;ol&gt;</strong> para designar listas ordenadas. Fechamento obrigatório</p>
+    <p>Dentro do corpo do ol, utiliza-se o <strong>&lt;li&gt;</strong> para designar os itens da lista</p>
+    <ol>
+        <li>Acordar</li>
+        <li>Escovar dentes</li>
+        <li>Meditar</li>
+        <li>Tomar café</li>
+    </ol>
+    <hr>
+    <h2>Lista Ordenada enumerada</h2>
+    <p>A tag ol tem um método chamado start, que determina em qual numeração a lista iniciará.</p>
+    <p>Foi escolhido 3 para inciar, mas pode ser qualquer número</p>
+    <ol start="3">
+        <li>Acordar</li>
+        <li>Escovar dentes</li>
+        <li>Meditar</li>
+        <li>Tomar café</li>
+    </ol>
+    <hr>
+    <h2>Lista Ordenada - Tipos de marcador</h2>
+    <p>A tag ol tem um método chamdo type, que estiliza os marcadores dos itens da lista.</p>
+    <ol type = "I">
+        <li>Acordar</li>
+        <li>Escovar dentes</li>
+        <li>Meditar</li>
+        <li>Tomar café</li>
+    </ol>
+    <hr>
+    <h1>Lista Desordenadas</h1>
+    <p>Utiliza-se o <strong>&lt;ul&gt;</strong> para designar listas desordenadas </p>
+    <p>A tag ul também possui o método type, para escolher marcadores dos itens</p>
+    <ul><!-- Disc circle square é o marcador padrão-->
+        <li>Pão</li>
+        <li>manteiga</li>
+        <li>café</li>
+        <li>açúcar</li>
+        <li>fruta</li>
+        <li>panela</li>
+        <li>cozinha</li>
+
+    </ul>
+    <hr>
+    <h1>Juntando listas</h1>
+    <p>Dá para aninhar ol dentro de li e etc...</p>
+    <h2>Minhas linguagens</h2>
+    <ol>
+        <li> Linguagens antigas</li>
+        <ol type="a">
+            <li>Delphi</li>
+            <li>Matlab</li>
+            <li>C</li>
+        </ol>
+        <li> Linguagens Novas</li>
+        <ol type="I">
+            <li>Python</li>
+            <li>Visual Basic</li>
+            <li>Javascript</li>
+        </ol>
+        <li>Jogos mais jogados</li>
+        <ul>
+            <li>Resident Evil</li>
+            <li>GTA</li>
+            <li>Call of Duty</li>
+            <li>Need For Speed</li>
+        </ul>
+    </ol>
+    <hr>
+    <h1>Lista de Definições</h1>
+    <p>Utiliza-se o marcador <strong>&lt;dl&gt;</strong> para designar uma lista de definição.</p>
+    <p>Dentro do dl, utiliza-se o <strong>&lt;dt&gt;</strong> para designar o item a ser descrito</p>
+    <p>E utiliza-se o <strong>&lt;dd&gt;</strong> para mostrar a descrição do item</p>
+    <dl>
+        <dt>HTML</dt>
+        <dd>É a linguagem de marcação utilizada para a criação de conteúdo de um site.</dd>
+        <dt>CSS</dt>
+        <dd>É a linguagem de marcação utilizada para criar o design de um site. </dd>
+        <dt>Javascript</dt>
+        <dd>Linguagem de programação para a criação de interatividade de um site.</dd>
+    </dl>
+</body>
+</html>
