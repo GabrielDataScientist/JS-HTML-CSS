@@ -1,0 +1,13 @@
+body{
+    background-color: aqua;
+
+}
+select{
+    
+}
+div{
+    padding: 10px;
+}
+div#result{
+    font: normal 20px Arial;
+}
