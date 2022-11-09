@@ -78,3 +78,4 @@ Object.assign(objeto1, objeto2)
 console.log("Depois da fusão: ", objeto1);
 
 
+
