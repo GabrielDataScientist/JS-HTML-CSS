@@ -63,7 +63,16 @@ class CarrinhoCompra{
         console.log(`Você adicionou ${adicionar} item(ns) ao seu carrinho!`);
     }
 
-    remover(id_item){
+    valorTotal(){
+        let valorCarrinho = 0
+        for(let itemCarrinho in this.item){
+            valorCarrinho += (this.item[itemCarrinho].preco * this.item[itemCarrinho].qnt)
+        } 
+
+        console.log(`O valor total do carrinho é: ${valorCarrinho}`);
+    }
+
+    remover_qtd(id_item){
         for (let id_remover in this.item){
             if (this.item[id_remover].id == id_item){
                 this.item[id_remover].qnt -= 1
@@ -73,13 +82,26 @@ class CarrinhoCompra{
         console.log("Você está removendo um item da lista!");
     }
 
-    valorTotal(){
-        let valorCarrinho = 0
-        for(let itemCarrinho in this.item){
-            valorCarrinho += (this.item[itemCarrinho].preco * this.item[itemCarrinho].qnt)
-        } 
+    deletar_item(id_item){
+        //Primeiro, encontrar o valor do id    
+        for (let produtoCarrinho in this.item){
+            if (this.item[produtoCarrinho].id == id_item){
 
-        console.log(`O valor total do carrinho é: ${valorCarrinho}`);
+                //Encontrar o index do id
+                let obj = this.item[produtoCarrinho]
+                let index = this.item.findIndex(
+                        function(obj) {
+                                return obj.id == item
+                            })
+        
+                //O método splice() dele um elemento de uma matriz
+                //this.item.splice(index, 0)
+                console.log(index);
+            }
+
+        }
+
+        
     }
 }
 
@@ -109,7 +131,4 @@ let consumidor = new CarrinhoCompra([
 
 ])
 
-consumidor.verCarrinho
-consumidor.addItem({id:4, item: "Meia", tamanho:"P", qnt: 3, preco: 20})
-consumidor.verCarrinho
-consumidor.valorTotal()
+consumidor.deletar_item(1)
