@@ -7,6 +7,9 @@
         Object.assign(objeto_principal, objeto_adicional, ...)
     {} = objeto
     [] = matriz
+
+    Para acessar os valores
+        Objeto[key]
 */
 
 let pessoa = {
@@ -16,6 +19,7 @@ let pessoa = {
     estado: "Minas Gerais"
 }
 
+//Acessando os valores do objeto
 console.log(pessoa)
 console.log(pessoa.nome);
 console.log(pessoa.idade);
@@ -78,4 +82,21 @@ Object.assign(objeto1, objeto2)
 console.log("Depois da fusão: ", objeto1);
 
 
+//Acessando os valores dinâmicamente
+let objeto3 = {
+    "Item1": 100,
+    "Item2": 200,
+    "Item3": 300
+}
+
+let a = "Item1"
+let b = "Item2"
+
+//Use os colchetes para acessar o valor passando o nome da chave
+let valor = objeto3[a]
+let valor2 = objeto3[b]
+
+let resultado = valor + valor2
+
+console.log(resultado);
 

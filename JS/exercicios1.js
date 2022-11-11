@@ -37,49 +37,79 @@ let cliente = new Conta("001", 1000)
 //Carrinho de compras de um e-commerce
 
 class CarrinhoCompra{
-    constructor(){
-        this.lista = []
-        this.total = 0
-        this.produtos = {}
-        this.produtos_escolhidos = {}
-        this.itens()
+    constructor(item){
+       this.item = item
     }
 
-    itens(){
-        this.produtos = {
-            "A":100,
-            "B": 200,
-            "C":300,
-            "D":400
+    get verCarrinho(){
+        console.log("Itens do carrinho");
+        console.log("----------------");
+        console.log(this.item);
+    }
+
+    addItem(item_novo){
+        this.item.push(item_novo)
+    }
+
+    //A ideia é iterar sobre o objeto, procurando o valor do id
+    //itemAdd é o iterador. É ele quem vai percorrer todos os parâmetros do objeto
+    atualizar_carrinho(id_item, adicionar){
+        for (let itemAdd in this.item){
+            if (this.item[itemAdd].id == id_item){
+                this.item[itemAdd].qnt += adicionar
+            }
         }
-        //iterando sobre o objeto produtos
-        for (const [key, values] of Object.entries(this.produtos)){
-            console.log(`Produto: ${key} - Valor: ${values}`);
+
+        console.log(`Você adicionou ${adicionar} item(ns) ao seu carrinho!`);
+    }
+
+    remover(id_item){
+        for (let id_remover in this.item){
+            if (this.item[id_remover].id == id_item){
+                this.item[id_remover].qnt -= 1
+            }
         }
 
-    }
-    comprar(){
-        console.log("Você comprou!");
-    }
-
-    cancelar(){
-        this.lista = []
-        console.log("Você cancelou a operação!");
-    }
-
-    adicionar(trem){
-        // this.lista.push(trem)
-        // console.log(`Você está adicionando um item ao carrinho: ${trem}`);
-        // console.log(`Lista de iten(s) adicionados ao carrminho: ${this.lista}`);
-        // console.log(`Você tem ${this.lista.length} itens no carrinho`);
-        console.log(this.produtos.keys[trem]);
-
-    }
-
-    remover(){
         console.log("Você está removendo um item da lista!");
+    }
+
+    valorTotal(){
+        let valorCarrinho = 0
+        for(let itemCarrinho in this.item){
+            valorCarrinho += (this.item[itemCarrinho].preco * this.item[itemCarrinho].qnt)
+        } 
+
+        console.log(`O valor total do carrinho é: ${valorCarrinho}`);
     }
 }
 
-let consumidor = new CarrinhoCompra()
-consumidor.adicionar("A")
+//Criando o objeto
+let consumidor = new CarrinhoCompra([
+    {
+        id:01,
+        item:"Camisa",
+        tamanho:"M",
+        qnt:2,
+        preco:100
+    },
+    {
+        id:02,
+        item:"Calça",
+        tamanho:"M",
+        qnt:2,
+        preco:100
+    },
+    {
+        id:03,
+        item:"Tenis",
+        tamanho:"M",
+        qnt:1,
+        preco:200
+    },
+
+])
+
+consumidor.verCarrinho
+consumidor.addItem({id:4, item: "Meia", tamanho:"P", qnt: 3, preco: 20})
+consumidor.verCarrinho
+consumidor.valorTotal()
