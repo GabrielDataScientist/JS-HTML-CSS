@@ -99,9 +99,10 @@ class CarrinhoCompra{
         
                 //O método splice() dele um elemento de uma matriz
                 //this.item.splice(index, 0)
+                console.log(`Você deletou o item: ${this.item[produtoCarrinho].produto} no índice ${this.item[produtoCarrinho].id}`);
                 console.log(index);
                 this.item.splice(index, 1)
-                console.log(`Você deletou o item: ${this.item[produtoCarrinho].produto} no índice ${this.item[produtoCarrinho].id}`);
+                
             }
         }
 
