@@ -4,7 +4,25 @@
 
     O objeto é indexado, onde cada elemento possui um índice específico, podendo ser acessado, adicionado e deletado
     dinâmicamente
-*/
+
+    findIndex(elemento, index, array)
+        apenas o parâmetro elemento é obrigatório
+
+    splice(posição_elemento, qnt_elemento_remover, elemento)
+    0 = adiciona
+    1 = remove/troca
+
+    const months = ['Jan', 'March', 'April', 'June'];
+    months.splice(1, 0, 'Feb');
+    // inserts at index 1
+    console.log(months);
+    // expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+    months.splice(4, 1, 'May');
+    // replaces 1 element at index 4
+    console.log(months);
+    // expected output: Array ["Jan", "Feb", "March", "April", "May"]
+    */
 
 
 //Constrói um objeto

@@ -34,6 +34,8 @@ let cliente = new Conta("001", 1000)
 // cliente.depositar(1000)
 // cliente.sacar(500)
 
+//----------------------------------------------
+
 //Carrinho de compras de um e-commerce
 
 class CarrinhoCompra{
@@ -82,23 +84,25 @@ class CarrinhoCompra{
         console.log("Você está removendo um item da lista!");
     }
 
-    deletar_item(id_item){
+    deletar_item(item){
         //Primeiro, encontrar o valor do id    
         for (let produtoCarrinho in this.item){
-            if (this.item[produtoCarrinho].id == id_item){
-
+            if (this.item[produtoCarrinho].id == item.id){
+                
                 //Encontrar o index do id
+                //findIndex(elemento, index, array) - index e array são opcionais
                 let obj = this.item[produtoCarrinho]
                 let index = this.item.findIndex(
                         function(obj) {
-                                return obj.id == item
+                                return obj.id == item.id
                             })
         
                 //O método splice() dele um elemento de uma matriz
                 //this.item.splice(index, 0)
                 console.log(index);
+                this.item.splice(index, 1)
+                console.log(`Você deletou o item: ${this.item[produtoCarrinho].produto} no índice ${this.item[produtoCarrinho].id}`);
             }
-
         }
 
         
@@ -108,22 +112,22 @@ class CarrinhoCompra{
 //Criando o objeto
 let consumidor = new CarrinhoCompra([
     {
-        id:01,
-        item:"Camisa",
+        id:0,
+        produto:"Camisa",
         tamanho:"M",
         qnt:2,
         preco:100
     },
     {
-        id:02,
-        item:"Calça",
+        id:1,
+        produto:"Calça",
         tamanho:"M",
         qnt:2,
         preco:100
     },
     {
-        id:03,
-        item:"Tenis",
+        id:2,
+        produto:"Tenis",
         tamanho:"M",
         qnt:1,
         preco:200
@@ -131,4 +135,8 @@ let consumidor = new CarrinhoCompra([
 
 ])
 
-consumidor.deletar_item(1)
+consumidor.verCarrinho
+consumidor.deletar_item({id:1})
+consumidor.verCarrinho
+consumidor.deletar_item({id:0})
+consumidor.verCarrinho
