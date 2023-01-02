@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+    <style>
+        div{
+            display: inline-block;
+            /* Padrão. Um em cima do outro: display: block; */
+            /* Apenas o conteúdo: display: contents; */
+            background-color: blueviolet;
+            text-align: center;
+            font-weight: bold;
+            height: 300px;
+            width: 300px;
+            border: 1px solid black
+        }
+        
+        /*: -> pseudo-classe. Deve estar relacionado a um elemento ou a uma classe*/
+        div:hover{
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!--Div é um espaço qualquer. Utilizada para aprimorar a divisão dos componentes-->
+    <div id="d1">01</div>
+    <div id="d2">02</div>
+    <div>03</div>
+    <div>04</div>
+    <div>05</div>
+</body>
+</html>

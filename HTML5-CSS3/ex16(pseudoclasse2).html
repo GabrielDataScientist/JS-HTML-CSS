@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classe 2</title>
+    <style>
+        /* elemento > elemento_aninhado = exemplo de herença dentro de divs*/
+        div > p{
+            display: none;
+        }
+
+        div:hover > p{
+            display: block;
+            font-weight: bolder;
+            color: black
+        }
+
+        div:hover{
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Hover (passar o mouse)</h1>
+    <p class="paragrafo">Passe o mouse sobre o texto abaixo</p>
+    <div>
+        Passe o mouse aqui!
+        <p>
+            TEXTO ESCONDIDO
+        </p>
+    </div>
+</body>
+</html>

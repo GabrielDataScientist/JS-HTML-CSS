@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Fontes em CSS </title>
+    <style>
+        h2{
+            /*A fonte utilizada deve aceitar negrito, itálico e sublinhado*/
+            font-family: 'Arial';
+
+            /* 
+                Medidas absolutas: cm, mm, in, px, pt, pc
+                Medidas relativas: em, ex, rem, vw, vh, %
+                16px aproximadamente 1em
+            */
+            font-size: 2ch;
+
+            /* font-weight pode ser lighter, normal, bold ou bolder. Ou utilizar número entre 100 (lighter) e 900 (bolder) */
+            /* font-weight: lighter; */
+            /*font-weight: bold;*/
+            /* font-weight: bolder; */
+            font-weight: normal;
+
+            font-style: italic;
+
+            text-decoration: underline;
+        }
+
+        p{
+            /* Shorthand - atalho para aplicar algumas caraterísicas de uma vez só
+                font = font-style, font-weight, font-size, font-family
+            */
+
+            font: normal bold 2em Arial;
+        }
+    </style>
+</head>
+<body>
+    <h2> Tipo de Fonte 1</h2>
+    <p> Exemplo de shorthand</p>
+</body>
+</html>

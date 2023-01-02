@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/*
+    em HTML é id = em CSS é #. Boas práticas ter apenas um id por tag com nomes diferentes
+    em HTML é class = em CSS é. Use a class para aplicar uma propriedade para mais de uma tag.
+*/
+body{
+    background-color: antiquewhite
+}
+
+/* Utilizando id*/
+h1#principal{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*Utilizando class*/
+.basico{
+    color: blue
+}
+
+.intermediario{
+    color: rgb(217, 217, 11)
+}
+
+.avancado{
+    color: red
+}
+
+.destaque{
+    color:rgb(103, 1, 90);
+    font-weight: 900;
+}
